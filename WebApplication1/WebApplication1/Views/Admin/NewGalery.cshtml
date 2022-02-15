@@ -1,0 +1,21 @@
+﻿@model WebApplication1.Models.Classes.Galery
+@{
+    ViewBag.Title = "NewGalery";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Resim Ekle</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.Label("Resim Linki")
+    @Html.TextBoxFor(x => x.pic, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim Başlığı")
+    @Html.TextBoxFor(x => x.header, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet ve Ekle</button>
+</form>

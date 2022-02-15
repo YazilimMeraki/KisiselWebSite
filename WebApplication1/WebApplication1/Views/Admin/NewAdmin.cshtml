@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.Classes.Admin
+@{
+    ViewBag.Title = "NewAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Admin</h2>
+
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.pwd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet ve Ekle</button>
+</form>

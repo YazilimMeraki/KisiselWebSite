@@ -1,0 +1,23 @@
+﻿@model WebApplication1.Models.Classes.Slider
+@{
+    ViewBag.Title = "BringSlider";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Slider Güncelle</h2>
+
+<br />
+
+@using (Html.BeginForm("UpdateSlider", "Admin", FormMethod.Post))
+{
+    @Html.Label("ID");
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" });
+    <br />
+    @Html.Label("Resim Linki");
+    @Html.TextBoxFor(x => x.pic, new { @class = "form-control" });
+    <br />
+    @Html.Label("Proje Başlığı");
+    @Html.TextBoxFor(x => x.header, new { @class = "form-control" });
+    <br />
+    <button class="btn btn-success">Kaydet ve Güncelle</button>
+}

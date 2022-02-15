@@ -1,0 +1,133 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Images>
+
+
+@if (true)
+{
+    int id = 1;
+    id++;
+    if (id <= 3)
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+
+    }
+    if (id == 6 || id >= 3)
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    }
+    if (id > 6)
+    {<div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+
+    }
+    if (id == 9 || id > 6)
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    }
+    if (id >9)
+    {<div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+
+    }
+    if (id >12 || id == 15)
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var y in Model)
+            {
+
+                <div class="col">
+                    <div class="card h-100 shadow ekipcard">
+                        <img src="@y.pic" id="prj" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@y.header</h5>
+                            <p class="card-text"> @y.about</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    }
+
+
+
+}

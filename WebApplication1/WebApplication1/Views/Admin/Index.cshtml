@@ -1,0 +1,27 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Homepage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>ID</th>
+        <th>Sayfa Adı</th>
+        <th>Hakkımda </th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.PageName</td>
+            <td>@x.AboutMe</td>
+            <td><a href="/Admin/CallHomepage/@x.Id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+</table>

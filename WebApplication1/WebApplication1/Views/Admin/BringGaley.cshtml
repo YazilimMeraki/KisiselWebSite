@@ -1,0 +1,24 @@
+﻿@model WebApplication1.Models.Classes.Galery
+@{
+    ViewBag.Title = "BringGaley";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Resim Güncelle</h2>
+
+
+<br />
+
+@using (Html.BeginForm("UpdateGalery", "Admin", FormMethod.Post))
+{
+    @Html.Label("ID");
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" });
+    <br />
+    @Html.Label("Resim Linki");
+    @Html.TextBoxFor(x => x.pic, new { @class = "form-control" });
+    <br />
+    @Html.Label("Resim Başlığı");
+    @Html.TextBoxFor(x => x.header, new { @class = "form-control" });
+    <br />
+    <button class="btn btn-success">Kaydet ve Güncelle</button>
+}

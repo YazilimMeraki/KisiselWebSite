@@ -1,0 +1,47 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Galery>
+
+
+@if (true)
+{
+    int id = 1;
+    id++;
+    <div class="row justify-content-center align-items-center align-self-center">
+        @if (id <= 4)
+        {
+            foreach (var x in Model)
+            {
+
+
+                <div class="col-md-3 ">
+                    <figure class="figure">
+                        <a href="@x.pic" target="blank">
+                            <img src="@x.pic" class="figure-img img-fluid rounded shadow" alt="...">
+                        </a>
+                    </figure>
+                </div>
+
+
+                if (id > 4 || id >= 8)
+                {
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <figure class="figure">
+                                <a href="@x.pic" target="blank">
+                                    <img src="@x.pic" class="figure-img img-fluid rounded shadow" alt="...">
+                                </a>
+                            </figure>
+                        </div>
+
+
+
+                    </div>
+
+                }
+                
+
+            }
+        }
+    </div>
+}

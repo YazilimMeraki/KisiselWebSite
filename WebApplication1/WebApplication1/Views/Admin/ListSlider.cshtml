@@ -1,0 +1,34 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Slider>
+
+@{
+    ViewBag.Title = "ListSlider";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Baş Resim</h2>
+
+<br />
+
+<table class="table table-bordered mt-3 ">
+    <tr>
+        <th>ID</th>
+        <th>Resim Linki</th>
+        <th>Resim Başlığı</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td><img src="@x.pic" style="height:100px;width:100px;" /></td>
+            <td>@x.header</td>
+            <td><a href="/Admin/BringSlider/@x.Id" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<br />
+<br />

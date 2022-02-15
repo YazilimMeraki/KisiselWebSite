@@ -1,0 +1,36 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Galery>
+@{
+    ViewBag.Title = "ListGalery";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Galeri Resimleri</h2>
+
+<br />
+
+<table class="table table-bordered ">
+    <tr>
+        <th>ID</th>
+        <th>Resim</th>
+        <th>Resim Başlığı</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td><img src="@x.pic" style="height:100px;width:100px;" /></td>
+            <td>@x.header</td>
+            <td><a href="/Admin/BringGaley/@x.Id" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/Admin/DeleteGalery/@x.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/Admin/NewGalery" class="btn btn-primary"> Yeni Proje Ekle</a>
+<br />
+<br />

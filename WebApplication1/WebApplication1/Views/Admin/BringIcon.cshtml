@@ -1,0 +1,23 @@
+﻿@model WebApplication1.Models.Classes.Icon
+@{
+    ViewBag.Title = "BringIcon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İkon Güncelle</h2>
+<br />
+
+@using(Html.BeginForm("UpdateIcon","Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id);
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" });
+    <br />
+    @Html.LabelFor(x => x.IconName);
+    @Html.TextBoxFor(x => x.IconName, new { @class = "form-control" });
+    <br />
+    @Html.LabelFor(x => x.Link);
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" });
+    <br />
+    <button class="btn btn-success">Kaydet ve Güncelle</button>
+}
+

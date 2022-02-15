@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.Classes.Homepage
+
+
+@{
+    ViewBag.Title = "CallHomepage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Anasayfa Bilgileri Güncelleme</h2>
+<hr />
+
+@using (Html.BeginForm("UpdateHomepage", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readoly = "readonly" })
+    <br />
+    @Html.LabelFor(x=>x.PageName)
+    @Html.TextBoxFor(x=> x.PageName, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.AboutMe)
+    @Html.TextAreaFor(x=>x.AboutMe, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success"> Güncelle </button>
+}
+
+
+

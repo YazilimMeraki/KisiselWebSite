@@ -1,0 +1,32 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Icon>
+
+@{
+    ViewBag.Title = "CallIcon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Sosyal Medya Hesapları</h2>
+<br />
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>ID</th>
+        <th>Ikon</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td><i class="@x.IconName"></i></td>
+            <td><a href="/Admin/BringIcon/@x.Id" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/Admin/DeleteIcon/@x.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+        
+    }
+</table>
+<br />
+<br />
+<a href="/Admin/NewIcon/" class="btn btn-primary" > Yeni İkon Ekle</a>

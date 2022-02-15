@@ -1,0 +1,37 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Images>
+@{
+    ViewBag.Title = "ListProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Projeler </h2>
+<br />
+
+<table class="table table-bordered ">
+    <tr>
+        <th>ID</th>
+        <th>Proje Resmi</th>
+        <th>Proje Başlığı</th>
+        <th>Proje Hakkında</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td><img src="@x.pic" style="height:100px;width:100px;" /></td>
+            <td>@x.header</td>
+            <td style="height:100px;width:250px;">@x.about</td>
+            <td><a href="/Admin/BringProject/@x.Id" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/Admin/DeleteProject/@x.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/Admin/NewProject" class="btn btn-primary"> Yeni Proje Ekle</a>
+<br />
+<br />

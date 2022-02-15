@@ -1,0 +1,88 @@
+.resimslider{
+    height: 600px;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    padding-top: 50px;
+}
+
+.hakkimizda{
+    background-color: #f2f2f2;
+}
+
+.ayrac{
+    opacity: 1;
+    border: none;
+    border-top: 3px solid #343a40;
+    max-width: 250px;
+    margin: 25px auto;
+}
+
+.ibeyaz{
+    background-color: white;
+    font-size: 40px;
+    color: #343a40;
+    position: relative;
+    top: -50px;
+    border: 10px solid white;
+}
+
+.igri{
+    background-color: #f2f2f2;
+    font-size: 40px;
+    color: #343a40;
+    position: relative;
+    top: -50px;
+    border: 10px solid #f2f2f2;
+}
+
+.ekipcard:hover{
+    opacity: 0.8;
+}
+
+.ekipcardx img{
+    min-height: 250px;
+}
+
+.galeri{
+    background-color: #f2f2f2;
+}
+
+.figure:hover{
+    transition: 2s;
+    opacity: 0.8;
+}
+
+
+
+.figure img{
+    height: 250px;
+    width: 250px;
+}
+
+.form-control{
+    margin-top: 5px;
+    width: 630px;
+}
+
+/* Proje Görselleri*/
+
+#prj{
+    height: 200px;
+    width: auto;
+}
+
+/*  Linkler */
+
+.footer i{
+    padding: 10px;
+    color: #f2f2f2;
+    transition: 0.7;
+}
+.footer i:hover {
+    font-size: 36px;
+    transition: 0.7s;
+}
+
+

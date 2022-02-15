@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.Classes.Admin
+@{
+    ViewBag.Title = "BringAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Admin Güncelle</h2>
+
+
+<br />
+
+@using (Html.BeginForm("UpdateAdmin", "Admin", FormMethod.Post))
+{
+    @Html.Label("ID");
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" });
+    <br />
+    @Html.Label("Kullanıcı Adı");
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control"});
+    <br />
+    @Html.Label("Şifre");
+    @Html.TextBoxFor(x => x.pwd, new { @class = "form-control" });
+    <br />
+
+    <button class="btn btn-success">Kaydet ve Güncelle</button>
+}
